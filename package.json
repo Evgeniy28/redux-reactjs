@@ -2,7 +2,7 @@
   "name": "redux-reactjs",
   "version": "1.0.0",
   "description": "Redux-ReactJS Application",
-  "main": "main.js",
+  "main": "index.js",
   "scripts": {
     "devserver": "webpack-dev-server --debug --output-pathinfo --colors --inline --hot"
   },
@@ -30,6 +30,8 @@
     "babel-polyfill": "^6.23.0",
     "babel-runtime": "^6.23.0",
     "react": "^15.4.2",
-    "react-dom": "^15.4.2"
+    "react-dom": "^15.4.2",
+    "react-redux": "^5.0.3",
+    "redux": "^3.6.0"
   }
 }
