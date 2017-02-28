@@ -1,18 +1,21 @@
-import React       from 'react'
-import { connect } from 'react-redux'
+import React, { Component } from 'react'
+import { connect }          from 'react-redux'
 
-const App = React.createClass({
+import User from '../components/User'
+import Page from '../components/Page'
+
+class App extends Component {
   render() {
-    const { name } = this.props.user
-    const { year, photos } = this.props.page
+    const { user, page } = this.props
+
     return (
       <div className='App'>
-        <h2>Hello, {name}!</h2>
-        <p>У тебя {photos.length} фото за {year} год!</p>
+        <User name={user.name} />
+        <Page photos={page.photos} year={page.year} />
       </div>
     );
   }
-});
+}
 
 function mapStateToProps (state) {
   return {
