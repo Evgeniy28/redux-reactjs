@@ -59,7 +59,11 @@ module.exports = {
       {
         test: /\.css$/,
         include: resolve(__dirname, 'src'),
-        loader: "style!css!postcss"
+        use: [
+          'style',
+          'css',
+          'postcss'
+        ]
       }
     ]
   },
