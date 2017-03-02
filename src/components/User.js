@@ -5,7 +5,7 @@ class User extends Component {
     const { name } = this.props
 
     return (
-      <div>
+      <div className='ib user'>
         <p>Hello, {name}!</p>
       </div>
     );
