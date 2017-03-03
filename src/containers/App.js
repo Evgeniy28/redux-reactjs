@@ -10,12 +10,12 @@ import Page from '../components/Page'
 class App extends Component {
   render() {
     const { user, page } = this.props
-    const { setYear } = this.props.pageActions
+    const { getPhotos } = this.props.pageActions
 
     return (
       <div className='row'>
         <User name={user.name} />
-        <Page photos={page.photos} year={page.year} setYear={setYear} />
+        <Page photos={page.photos} year={page.year} getPhotos={getPhotos} fetching={page.fetching} />
       </div>
     );
   }
