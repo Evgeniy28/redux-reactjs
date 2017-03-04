@@ -26,10 +26,11 @@ function getMorePhotos(offset, count, year, dispatch) {
   VK.Api.call('photos.getAll', {extended:1, count: count, offset: offset},(r) => { // eslint-disable-line no-undef
     try {
       if (offset <= r.response[0] - count) {
-        offset+=200;
+        offset+=count;
         photosArr = photosArr.concat(r.response)
         getMorePhotos(offset,count,year,dispatch)
       } else {
+        photosArr = photosArr.concat(r.response)
         let photos = makeYearPhotos(photosArr, year)
         cached = true
         dispatch({
