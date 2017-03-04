@@ -77,7 +77,7 @@ h3 {
   font-size: 16px;
   outline: 0;
   padding: 0 2rem;
-  margin-right: 1rem;
+  margin: 0 1rem 1rem 0;
   text-transform: uppercase;
   vertical-align: middle;
   color: #fff;
@@ -89,4 +89,14 @@ h3 {
 }
 .btn:hover {
   background-color: #6d8cb0
+}
+
+.photo {
+  display: inline-block;
+  margin: 10px 2px;
+  width: 130px;
+}
+
+.error {
+  color: #FF0000;
 }
